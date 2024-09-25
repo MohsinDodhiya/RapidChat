@@ -33,10 +33,7 @@ const useLogin = () => {
 
       if (!res.ok) {
         const errorText = await res.text();
-        const errorData = errorText
-          ? JSON.parse(errorText)
-          : { error: "Login failed" };
-        throw new Error(errorData.error || "Login failed");
+        console.error("😀errorText:", errorText);
       }
 
       const data = await res.json();

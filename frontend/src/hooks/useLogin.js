@@ -32,7 +32,7 @@ const useLogin = () => {
       });
 
       if (!res.ok) {
-        const errorText = await res.text(); // Capture raw text response in case JSON is not returned
+        const errorText = await res.text();
         const errorData = errorText
           ? JSON.parse(errorText)
           : { error: "Login failed" };
@@ -40,16 +40,17 @@ const useLogin = () => {
       }
 
       const data = await res.json();
+      console.error("😀Login Data:", data);
 
-      // Store token and user info
-      localStorage.setItem("token", data.token); // Store the token in localStorage
-      localStorage.setItem("user", JSON.stringify(data.user)); // Store the user info
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
 
-      setAuthUser(data.user); // Set user in context
+      setAuthUser(data.user);
+
       toast.success("Login successful!");
     } catch (error) {
       toast.error(error.message);
-      console.error("Login Error:", error);
+      console.error("😀Login Error:", error);
     } finally {
       setLoading(false);
     }

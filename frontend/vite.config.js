@@ -6,12 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": {
-        //target: "http://localhost:3001",   // LocalHost
-        target: "https://rapidchat-backend-ctip.onrender.com", // renderHosting
-        secure: false,
-        changeOrigin: true,
-      },
+      "/api": "http://localhost:3001",
     },
   },
 });

@@ -7,8 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-     origin: ["https://rapidchat-pi1k.onrender.com"],  // renderHosting
-    // origin: ["http://localhost:5173"], // LocalHost
+    origin: ["http://localhost:5173"],
     methods: ["GET", "POST"],
   },
 });

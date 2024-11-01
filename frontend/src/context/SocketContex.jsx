@@ -15,8 +15,7 @@ export const SocketContexProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io("https://rapidchat-backend-ctip.onrender.com", { // renderHosting
-        // const socket = io("http://localhost:3001", {  // LocalHost
+      const socket = io("http://localhost:3001", {
         query: {
           userId: authUser._id,
         },

@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": process.env.VITE_REACT_APP_URL,
+      "/api": process.env.VITE_REACT_APP_BACKEND_URL,
     },
   },
 });

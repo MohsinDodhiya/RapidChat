@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: [process.env.VITE_REACT_APP_URL],
+    origin: [process.env.VITE_REACT_APP_FRONTEND_URL],
     methods: ["GET", "POST"],
   },
 });

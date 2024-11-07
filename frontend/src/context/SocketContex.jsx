@@ -15,7 +15,7 @@ export const SocketContexProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io(process.env.VITE_REACT_APP_URL, {
+      const socket = io(process.env.VITE_REACT_APP_BACKEND_URL, {
         query: {
           userId: authUser._id,
         },

@@ -8,7 +8,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     // origin: ["http://localhost:5173"],
-    origin: ["https://rapidchat-mohsin-dodhiya.onrender.com"],
+    origin: ["https://rapid-chat-mohsin-dodhiya.vercel.app"],
     methods: ["GET", "POST"],
   },
 });

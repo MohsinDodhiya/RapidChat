@@ -12,6 +12,7 @@ const io = new Server(server, {
       "http://localhost:5173",
     ],
     methods: ["GET", "POST"],
+    credentials: true, // Add this if using cookies or authentication headers
   },
 });
 

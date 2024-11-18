@@ -9,7 +9,9 @@ const useGetConversations = () => {
     const getConversations = async () => {
       try {
         setLoading(true);
-        const res = await fetch("/api/users");
+        const res = await fetch(
+          "https://rapidchat-backend-t0nn.onrender.com/api/users"
+        );
         const data = await res.json();
 
         if (data.error) {

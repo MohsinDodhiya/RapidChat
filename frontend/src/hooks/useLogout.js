@@ -10,7 +10,7 @@ const useLogout = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("api/auth/logout", {
+      const res = await fetch("https://rapidchat-backend-t0nn.onrender.com/api/auth/logout", {
         method: "GET",
         headers: { "Content-type": "application/json" },
       });

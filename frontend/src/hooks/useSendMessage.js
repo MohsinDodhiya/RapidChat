@@ -9,7 +9,7 @@ const useSendMessage = () => {
     try {
       setLoading(true);
 
-      const res = await fetch(`/api/messages/send/${selectedConvesation._id}`, {
+      const res = await fetch(`https://rapidchat-backend-t0nn.onrender.com/api/messages/send/${selectedConvesation._id}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message }),

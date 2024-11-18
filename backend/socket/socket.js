@@ -10,6 +10,7 @@ const io = new Server(server, {
     origin: [
       "https://rapidchat-345d.onrender.com",
       "http://localhost:5173",
+      "https://rapidchat-backend-t0nn.onrender.com",
     ],
     methods: ["GET", "POST"],
     credentials: true, // Add this if using cookies or authentication headers

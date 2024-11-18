@@ -7,7 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:3000",
+        // target: "http://localhost:3000",
+        target: "https://rapidchat-backend-t0nn.onrender.coms",
         secure: false,
         changeOrigin: true,
       },
